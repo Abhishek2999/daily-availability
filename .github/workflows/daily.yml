@@ -1,5 +1,6 @@
 name: Daily Availability Update
-
+permissions:
+  contents: write
 on:
   schedule:
     - cron: '30 3 * * *'   # 9:00 AM IST
@@ -25,3 +26,4 @@ jobs:
           git add README.md
           git commit -m "Daily availability update" || echo "No changes"
           git push
+
